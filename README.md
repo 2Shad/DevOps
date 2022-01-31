@@ -42,7 +42,7 @@ end
 - after configuring vagrantfile, deploy the VM `vagrant up`
 - check status `vagrant status`
 - delete VM `vagrant destroy`
-- pause VM `vagrant halt`
+- shutdowns the VM `vagrant halt`
 - update VM `vagrant reload`
 - access VM through SSH `vagrant ssh`
 
