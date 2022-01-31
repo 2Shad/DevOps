@@ -17,8 +17,10 @@
 ```
 Vagrant.configure("2") do |config|
 
+ # creating a virtual machine ubuntu 
  config.vm.box = "ubuntu/xenial64"
-# creating a virtual machine ubuntu 
+ # creating a private network with ip
+ config.vm.network "private_network", ip: "192.168.10.100"
 
 end
 ```
@@ -27,3 +29,29 @@ end
 - delete VM `vagrant destroy`
 - pause `vagrant halt`
 - To update `vagrant reload`
+
+# Virtual Machines
+## **Requirements**
+### Install Ruby
+### Install Vagrant 
+### Install Virtual Box
+
+## **Vagrant**
+### Commands:
+- initialize vagrant with Vagrantfile `vagrant init`
+- after configuring vagrantfile, deploy the VM `vagrant up`
+- check status `vagrant status`
+- delete VM `vagrant destroy`
+- pause VM `vagrant halt`
+- update VM `vagrant reload`
+- access VM through SSH `vagrant ssh`
+
+### Vagrantfile
+
+## Linux Commands
+- super user do `sudo`
+- update package repository `sudo apt update`
+- upgrade packages `sudo apt upgrade`
+- install a package through apt `sudo apt install`
+- remove VM `sudo apt remove`
+- systemctl `systemctl status/restart/start/stop`
