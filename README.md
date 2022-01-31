@@ -32,9 +32,9 @@ end
 
 # Virtual Machines
 ## **Requirements**
-### Install Ruby
-### Install Vagrant 
-### Install Virtual Box
+#### Install Ruby
+#### Install Vagrant 
+#### Install VirtualBox
 
 ## **Vagrant**
 ### Commands:
