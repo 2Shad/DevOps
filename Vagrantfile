@@ -1,8 +1,3 @@
-$script = <<-'SCRIPT'
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y nginx
-SCRIPT
-
 Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/xenial64"
