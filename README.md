@@ -48,8 +48,9 @@ end
 
 ### Vagrantfile
 
-## Linux
+## **Linux**
 In Ubuntu we have the `apt` Package manager formerly known as `apt-get`.
+#### Commands:
 - super user do `sudo`
 - update package repository `sudo apt update`
 - upgrade packages `sudo apt upgrade`
