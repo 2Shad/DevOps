@@ -79,6 +79,8 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
   
+[My Script](sync/provision.sh)
+  
 ### Ruby
 - `gem install bundler` installing bundler with ruby
 - `bundle` installs ruby dependencies
