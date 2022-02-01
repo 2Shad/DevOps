@@ -75,3 +75,23 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 ### Bash scripting
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
+
+### Ruby
+- `gem install bundler` installing bundler with ruby
+- `bundle` installs ruby dependencies
+
+### **VM**
+
+### Dependencies
+- `sudo apt install python-software-properties`
+- `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+- `sudo apt-get install -y nodejs`
+- `sudo npm install pm2 -g`
+
+### App
+inside the app folder
+- `npm install`
+- `npm start`
+
+
+
