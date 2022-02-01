@@ -12,24 +12,6 @@
 ### Monolith - 2 tier & Microservices Architectures
 
 
-### Deployment
-
-```
-Vagrant.configure("2") do |config|
-
- # creating a virtual machine ubuntu 
- config.vm.box = "ubuntu/xenial64"
- # creating a private network with ip
- config.vm.network "private_network", ip: "192.168.10.100"
-
-end
-```
-- create a VM `vagrant up`
-- check status `vagrant status`
-- delete VM `vagrant destroy`
-- pause `vagrant halt`
-- To update `vagrant reload`
-
 # Virtual Machines
 ## **Requirements**
 #### [Install Ruby](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.6-1/rubyinstaller-devkit-2.6.6-1-x64.exe)
@@ -47,6 +29,16 @@ end
 - access VM through SSH `vagrant ssh`
 
 ### Vagrantfile
+```
+Vagrant.configure("2") do |config|
+
+ # creating a virtual machine ubuntu 
+ config.vm.box = "ubuntu/xenial64"
+ # creating a private network with ip
+ config.vm.network "private_network", ip: "192.168.10.100"
+
+end
+```
 
 ## **Linux**
 In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
@@ -56,4 +48,4 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - upgrade packages `sudo apt upgrade`
 - install a package through apt `sudo apt install`
 - remove VM `sudo apt remove`
-- systemctl `systemctl status/restart/start/stop`
+- manage services `systemctl status¦restart¦start¦stop`
