@@ -51,3 +51,27 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - install a package through apt `sudo apt install`
 - remove VM `sudo apt remove`
 - manage services `systemctl status¦restart¦start¦stop`
+
+### Linux basics
+- Who am I `uname -a`
+- Where am I `pwd`
+- list dir/files `ls`
+- list all including hidden folder/files `ls -a`
+- make dir `mkdir {dir-name} {dir-name2} ...`
+- navigate to dir `cd {dir-name}`
+- how to create a file `touch file-name` (nano would also create a file if it doesn't already exist)
+- How to display content of the file `cat {file-name}`
+- How to remove file `rm file-name`
+- How to remove directory `rm -r dir-name`
+- How to copy file `cp {source-file} {destination-file(dir)}`
+- How to move file `mv {source-file} {destination-file(dir)}`
+- How to check processes `top` or `htop` which is better.
+  
+#### Permissions
+- Read Write Executable Read-Only
+- How to check permissions `ls -la` or `ll`
+- change permission `[sudo] chmod {permissions} {file-name}` need sudo depending if it needs superuser permissions
+  
+### Bash scripting
+- `#!/bin/bash` on first line for a bash script file
+- `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
