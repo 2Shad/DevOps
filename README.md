@@ -14,9 +14,9 @@
 
 # Virtual Machines
 ## **Requirements**
-#### [Install Ruby](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.6-1/rubyinstaller-devkit-2.6.6-1-x64.exe)
-#### [Install Vagrant](https://www.vagrantup.com/)
-#### [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+> [Install Ruby](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.6-1/rubyinstaller-devkit-2.6.6-1-x64.exe)
+> [Install Vagrant](https://www.vagrantup.com/)
+> [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ## **Vagrant**
 ### Commands:
