@@ -30,7 +30,7 @@
 - update VM `vagrant reload`
 - access VM through SSH `vagrant ssh`
 
-### Vagrantfile
+### [Vagrantfile](Vagrantfile)
 ```
 Vagrant.configure("2") do |config|
 
@@ -75,11 +75,10 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - How to check permissions `ls -la` or `ll`
 - change permission `[sudo] chmod {permissions} {file-name}` need sudo depending if it needs superuser permissions
   
-### Bash scripting
+### [Bash scripting](sync/provision.sh)
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
-  
-[My Script](sync/provision.sh)
+
   
 ### Ruby
 - `gem install bundler` installing bundler with ruby
