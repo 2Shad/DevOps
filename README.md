@@ -59,10 +59,10 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - list all including hidden folder/files `ls -a`
 - make dir `mkdir {dir-name} {dir-name2} ...`
 - navigate to dir `cd {dir-name}`
-- how to create a file `touch file-name` (nano would also create a file if it doesn't already exist)
+- how to create a file `touch {file-name}` (nano would also create a file if it doesn't already exist)
 - How to display content of the file `cat {file-name}`
-- How to remove file `rm file-name`
-- How to remove directory `rm -r dir-name`
+- How to remove file `rm [-f] {file-name}`
+- How to remove directory `rm -r[f] {dir-name}`
 - How to copy file `cp {source-file} {destination-file(dir)}`
 - How to move file `mv {source-file} {destination-file(dir)}`
 - How to check processes `top` or `htop` which is better.
