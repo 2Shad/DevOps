@@ -5,9 +5,9 @@
 
 **Four pillars of DevOps best practice**
 - Ease of Use
-- Flexibility
+- Flexibility (can adapt to product owner's needs)
 - Robustness - Faster delivery of product
-- Cost - cost effective
+- Cost - cost effective (Automation - CI/CD)
 
 ### Monolith - 2 tier & Microservices Architectures
 
