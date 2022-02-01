@@ -41,6 +41,9 @@ Vagrant.configure("2") do |config|
 
 end
 ```
+#### **Additional configuration options**
+- execute script upon VM creation `config.vm.provision "shell", path: "{file-path-relative-to-Vagrantfile}"`
+- mounting a host folder to VM `config.vm.synced_folder "{host-path}", "{VM-path}"`
 
 ## **Linux**
 In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
@@ -75,7 +78,7 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 ### Bash scripting
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
-
+  
 ### Ruby
 - `gem install bundler` installing bundler with ruby
 - `bundle` installs ruby dependencies
