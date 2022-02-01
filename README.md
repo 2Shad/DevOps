@@ -95,6 +95,7 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 inside the app folder
 - `npm install`
 - `npm start`
+- `npm install forever -g && forever start app.js` to `npm start` as a daemon
 
 
 
