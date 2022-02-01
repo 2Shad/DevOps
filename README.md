@@ -1,4 +1,4 @@
-> install markdown extensions `All in one`
+> install `Markdown All in one` extension in VSC
 # what is DevOps
 ## why DevOps
 ### Benefits of DevOps
