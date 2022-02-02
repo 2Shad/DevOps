@@ -81,6 +81,7 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 ### Ruby
 - `gem install bundler` installing bundler with ruby
 - `bundle` installs ruby dependencies
+- `rake spec` check for dependencies failures in VM
 
 ### **VM**
 
