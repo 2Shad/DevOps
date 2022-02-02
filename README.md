@@ -77,6 +77,32 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
 
+### Linux Variables
+- Create Linux Var `FIRST_NAME=SHADMAN`
+- How to check the var `echo ${key}`
+  
+### Environment Variables
+- How to check `env var`
+- command: `printenv {key}` or `env`
+- Create env var `export {key}={value}`
+- How to make env var persistent?
+- How to delete `env var`, `unset {key}`
+
+
+- DB PREREQUISITE
+```
+  // connect to database
+if(process.env.DB_HOST) {
+  mongoose.connect(process.env.DB_HOST);
+
+  app.get("/posts" , function(req,res){
+      Post.find({} , function(err, posts){
+        if(err) return res.send(err);
+        res.render("posts/index" , {posts:posts});
+      })
+  });
+}
+```
   
 ### Ruby
 - `gem install bundler` installing bundler with ruby
@@ -96,6 +122,19 @@ inside the app folder
 - `npm install`
 - `npm start`
 - `npm install forever -g && forever start app.js` to `npm start` as a daemon
+
+### Nginx Reverse Proxy
+To reverse proxy app listening port 3000, change "location config" /etc/nginx/sites-avaliable/default
+```
+location / {
+                proxy_pass http://localhost:3000;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+    }
+```
 
 
 
