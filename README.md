@@ -47,15 +47,13 @@ end
 
 ## **Linux**
 In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
-#### Commands:
+### Linux basics:
 - super user do `sudo`
 - update package repository `sudo apt update`
 - upgrade packages `sudo apt upgrade`
 - install a package through apt `sudo apt install`
 - remove VM `sudo apt remove`
 - manage services `systemctl status¦restart¦start¦stop`
-
-### Linux basics
 - Who am I `uname -a`
 - Where am I `pwd`
 - list dir/files `ls`
@@ -86,7 +84,7 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 
 ### **VM**
 
-### Dependencies
+### Dependencies for app hosted with nginx
 - `sudo apt install python-software-properties`
 - `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
 - `sudo apt-get install -y nodejs`
