@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.10.100"
   
     # uploads and execute provision.sh relative to Vagrantfile
-    config.vm.provision "shell", path: "sync/provision.sh"  
+    config.vm.provision "shell", path: "sync/provision.sh", privileged: false 
 
     # optional if file syncing is needed
     config.vm.synced_folder ".", "/home/vagrant/app"
