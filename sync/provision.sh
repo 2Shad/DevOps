@@ -15,4 +15,4 @@ sudo npm install pm2 -g
 # install forever with global flag
 npm install forever -g
 # cd into app folder and npm install and start the server
-cd /home/vagrant/app/app && npm install && forever start app.js
+cd /home/vagrant/app/app && npm install
