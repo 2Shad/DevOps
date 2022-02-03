@@ -188,4 +188,6 @@ They are provide:
 
 > we can copy our files onto the cloud by doing `scp -i "~/.ssh/eng103a.pem" -r sync ubuntu@ec2-18-203-110-16.eu-west-1.compute.amazonaws.com:~`
 
+> We can open more ports for our VMs by selecting or VM and adding them in Security > Security groups > Inbound rules
+
 ### **Don't forget to shutdown your AWS VMs after you are done**
