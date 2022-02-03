@@ -13,6 +13,10 @@ sudo apt-get install -y nodejs
 # install pm2 with global flag
 sudo npm install pm2 -g
 # install forever with global flag
-npm install forever -g
+sudo npm install forever -g
+# replacing reverse proxy configuration for nginx appropriatly for our app
+cp /home/vagrant/app/sync/default /etc/nginx/sites-avaliable/
+# restarting nginx service
+sudo systemctl restart nginx
 # cd into app folder and npm install and start the server
-cd /home/vagrant/app/app && npm install
+cd /home/vagrant/app/app && npm install && sudo forever start app.js
