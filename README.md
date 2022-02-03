@@ -96,7 +96,7 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - How to check permissions `ls -la` or `ll`
 - change permission `[sudo] chmod {permissions} {file-name}` need sudo depending if it needs superuser permissions
   
-### [Bash scripting](sync/provision.sh)
+### [Bash scripting](sync/provision/app.sh)
 - `#!/bin/bash` on first line for a bash script file
 - `[sudo] ./{script}` to run the script, need sudo depending if it needs superuser permissions
 
