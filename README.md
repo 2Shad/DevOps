@@ -168,3 +168,24 @@ location / {
 change `bindIp: 127.0.0.1` to `bindIp: 0.0.0.0`, and then restart MongoDB `sudo systemctl restart mongod`
 
 
+## AWS
+They are provide:
+- Infrastructure as a service (IaaS)
+- platform as a service (PaaS)
+- software as a service (SaaS)
+
+### EC2 (Elastic Compute Cloud)
+> We are allowed to use the Ireland availability zones
+
+#### Create basic EC2 VMs
+- Choose OS and CPU Architecture (Ubuntu Server 18.04[x86])
+- Choose Instance Type (Default t2.micro)
+- Configure Instance Details (Subnet needs to be "DevOpsStudent default 1a" and set "Auto-assign Public IP" to Enable)
+- Add Tags (**Key:** NAME, **Value:** ENG103A_SHADMAN)
+- Create Security Group "eng103a_shadman", and set SSH sources allowed to "My IP"
+
+> After adding the ssh key in .ssh folder, we can ssh into the machine by `ssh -i "~/.ssh/eng103a.pem" ubuntu@ec2-18-203-110-16.eu-west-1.compute.amazonaws.com`
+
+> we can copy our files onto the cloud by doing `scp -i "~/.ssh/eng103a.pem" -r sync ubuntu@ec2-18-203-110-16.eu-west-1.compute.amazonaws.com:~`
+
+### **Don't forget to shutdown your AWS VMs after you are done**
