@@ -15,7 +15,7 @@ sudo npm install pm2 -g
 # install forever with global flag
 sudo npm install forever -g
 # replacing reverse proxy configuration for nginx appropriatly for our app
-sudo cp /home/vagrant/app/default /etc/nginx/sites-avaliable/
+sudo cp /home/vagrant/app/default /etc/nginx/sites-available/
 # restarting nginx service
 sudo systemctl restart nginx
 # cd into app folder and npm install and start the server

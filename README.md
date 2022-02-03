@@ -124,7 +124,7 @@ inside the app folder
 - `npm install forever -g && forever start app.js` to `npm start` as a daemon
 
 ### Nginx Reverse Proxy
-To reverse proxy app listening port 3000, change "location config" /etc/nginx/sites-avaliable/default
+To do a simple reverse proxy for our app listening at port 3000, change "location" config /etc/nginx/sites-available/default
 ```
 location / {
                 proxy_pass http://localhost:3000;
