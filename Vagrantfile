@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     app.vm.provision "shell", path: "sync/provision.sh"  
 
     # optional if file syncing is needed
-    app.vm.synced_folder ".", "/home/vagrant/app"
+    app.vm.synced_folder "sync/", "/home/vagrant/app"
   end
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/xenial64"
