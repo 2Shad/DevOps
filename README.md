@@ -192,3 +192,11 @@ They are provide:
 > We can open more ports for our VMs by selecting or VM and adding them in Security > Security groups > Inbound rules
 
 ### **Don't forget to shutdown your AWS VMs after you are done**
+
+- Ceate another EC2 for MongoDB
+- set-up/install the required version of MongoDB
+- change mongod.conf to allow app access
+- Only allow the App instance to access the DB instance
+- 27017 APP IP
+- Create enviroment variable in the App instance so it can connect to the DB instance
+- `npm start`
