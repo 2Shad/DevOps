@@ -170,7 +170,8 @@ change `bindIp: 127.0.0.1` to `bindIp: 0.0.0.0`, and then restart MongoDB `sudo 
 
 
 ## AWS
-![AWS-Diagram](Simple_AWS_image.png)
+![AWS_Diagram](Simple_AWS_image.png)
+
 They are provide:
 - Infrastructure as a service (IaaS)
 - platform as a service (PaaS)
