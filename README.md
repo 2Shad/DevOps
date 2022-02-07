@@ -210,10 +210,11 @@ They are provide:
 - use `npm start` preferably in a `screen` since AWS automatically disconnects after a while.
 
 ## AMI (Amazon Machine Image/s)
-AMI is 
+AMI is an AWS boot disk snapshotting service that lets us backup our instances data.
 Use Case:
 - Helps us save data
 - Helps automate deployments on Cloud
 
 - To Create an AMI image, you need to select the instance, and press on `Action > Image and templates > Create image`
 - To rebuild a VM from our AMI image, we go on AMI, search for our image, select it and press on `Launch instance from image`, *Note: we might need to use the same security group from a previous instance*
+- For our App and DB set-up, we need to update the DB IP in the env variable `DB_HOST`
