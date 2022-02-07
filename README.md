@@ -42,6 +42,10 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+#### **Additional configuration options**
+- execute script upon VM creation `config.vm.provision "shell", path: "{file-path-relative-to-Vagrantfile}"`
+- mounting a host folder to VM `config.vm.synced_folder "{host-path}", "{VM-path}"`
+
 #### Multi-VMs (example with VMs "app" and "db")
 ```
 Vagrant.configure("2") do |config|
@@ -63,10 +67,6 @@ Vagrant.configure("2") do |config|
   end
 end
 ```
-
-#### **Additional configuration options**
-- execute script upon VM creation `config.vm.provision "shell", path: "{file-path-relative-to-Vagrantfile}"`
-- mounting a host folder to VM `config.vm.synced_folder "{host-path}", "{VM-path}"`
 
 ## **Linux**
 In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
@@ -90,6 +90,8 @@ In Ubuntu we have the `apt` Package Manager formerly known as `apt-get`.
 - How to copy file `cp {source-file} {destination-file(dir)}`
 - How to move file `mv {source-file} {destination-file(dir)}`
 - How to check processes `top` or `htop` which is better.
+- Troubleshoot running services `ps aux`
+- Kill a process `kill {ID}`
   
 #### Permissions
 - Read Write Executable Read-Only
@@ -166,7 +168,11 @@ location / {
 - `sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20`
   
 #### Allow MongoDB to be accessed from anywhere
-change `bindIp: 127.0.0.1` to `bindIp: 0.0.0.0`, and then restart MongoDB `sudo systemctl restart mongod`
+change `bindIp: 127.0.0.1` to `bindIp: 0.0.0.0` in the /etc/mongod.conf file, and then restart MongoDB `sudo systemctl restart mongod`
+
+### App connection
+- set env variable **DB_HOST** using `export DB_HOST=mongodb://{IP}:{PORT}/posts`, and to make it persistent add it to `.bashrc` file
+- remember to seed by `node seeds/seed.js`
 
 
 ## AWS
@@ -178,7 +184,7 @@ They are provide:
 - software as a service (SaaS)
 
 ### EC2 (Elastic Compute Cloud)
-> We are allowed to use the Ireland availability zones
+> We are allowed to use the Ireland availability zones, For production think of what location would be best for our end users.
 
 #### Create basic EC2 VMs
 - Choose OS and CPU Architecture (Ubuntu Server 18.04[x86])
@@ -186,19 +192,19 @@ They are provide:
 - Configure Instance Details (Subnet needs to be "DevOpsStudent default 1a" and set "Auto-assign Public IP" to Enable)
 - Add Tags (**Key:** NAME, **Value:** ENG103A_SHADMAN)
 - Create Security Group "eng103a_shadman", and set SSH sources allowed to "My IP"
+- Use `eng103a.pem` ssh keys
 
-> After adding the ssh key in .ssh folder, we can ssh into the machine by `ssh -i "~/.ssh/eng103a.pem" ubuntu@ec2-18-203-110-16.eu-west-1.compute.amazonaws.com`
+> After adding the ssh key in .ssh folder and setting permission to `400` , we can ssh into the machine by `ssh -i "~/.ssh/eng103a.pem" ubuntu@{IP}`
 
-> we can copy our files onto the cloud by doing `scp -i "~/.ssh/eng103a.pem" -r sync ubuntu@ec2-18-203-110-16.eu-west-1.compute.amazonaws.com:~` (Makes sure to copy the app folder that has all the dependencies already installed)
+> we can copy our files onto the cloud by doing `scp -i "~/.ssh/eng103a.pem" -r sync ubuntu@{IP}:~` (Makes sure to copy the app folder that has all the dependencies already installed)
 
 > We can open more ports for our VMs by selecting or VM and adding them in Security > Security groups > Inbound rules
 
 ### **Don't forget to shutdown your AWS VMs after you are done**
 
-- Ceate another EC2 for MongoDB
+- Create another EC2 for MongoDB
 - set-up/install the required version of MongoDB
 - change mongod.conf to allow app access
-- Only allow the App instance to access the DB instance
-- 27017 APP IP
-- Create enviroment variable in the App instance so it can connect to the DB instance
-- `npm start`
+- Only allow the App instance to access the DB instance in the security group, by setting the source IP of our APP for port 27017
+- Create our env variable in the App instance so it can connect to the DB instance
+- use `npm start` preferably in a `screen` since AWS automatically disconnects after a while.
