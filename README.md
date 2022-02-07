@@ -208,3 +208,12 @@ They are provide:
 - Only allow the App instance to access the DB instance in the security group, by setting the source IP of our APP for port 27017
 - Create our env variable in the App instance so it can connect to the DB instance
 - use `npm start` preferably in a `screen` since AWS automatically disconnects after a while.
+
+## AMI (Amazon Machine Image/s)
+AMI is 
+Use Case:
+- Helps us save data
+- Helps automate deployments on Cloud
+
+- To Create an AMI image, you need to select the instance, and press on `Action > Image and templates > Create image`
+- To rebuild a VM from our AMI image, we go on AMI, search for our image, select it and press on `Launch instance from image`, *Note: we might need to use the same security group from a previous instance*
