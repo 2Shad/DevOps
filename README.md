@@ -218,3 +218,10 @@ Use Case:
 - To Create an AMI image, you need to select the instance, and press on `Action > Image and templates > Create image`
 - To rebuild a VM from our AMI image, we go on AMI, search for our image, select it and press on `Launch instance from image`, *Note: we might need to use the same security group from a previous instance*
 - For our App and DB set-up, we need to update the DB IP in the env variable `DB_HOST`
+
+## CloudWatch
+- First we need select `Monitoring` for our Instance and enable `Detailed monitoring`.
+- Go to Cloudwatch > Alarms > `In alarm`, and Create alarm.
+- Now press on `Select metric`, and in here, we need to search with our instance ID tag, as well as what metric we want the alarm for, and press next.
+- Now we set the critiria for the alarm going off, as well as we might want to change on what statistic the alarm would go off
+- Next we create a topic, this is where an SNS will be sent on. *Note: You would need to confirm your email*
