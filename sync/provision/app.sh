@@ -18,7 +18,7 @@ sudo npm install forever -g
 sudo cp /home/vagrant/app/default /etc/nginx/sites-available/
 # restarting nginx service
 sudo systemctl restart nginx
-echo "export DB_HOST='mongodb://192.168.10.150:27017/posts'" >> /home/vagrant/.bashrc
+echo "export DB_HOST='mongodb://shaddb.duckdns.org:27017/posts'" >> /root/.bashrc
 source /home/vagrant/.bashrc
 
 # cd into app folder and npm install and start the server
