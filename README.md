@@ -225,3 +225,5 @@ Use Case:
 - Now press on `Select metric`, and in here, we need to search with our instance ID tag, as well as what metric we want the alarm for, and press next.
 - Now we set the critiria for the alarm going off, as well as we might want to change on what statistic the alarm would go off
 - Next we create a topic, this is where an SNS will be sent on. *Note: You would need to confirm your email*
+
+Launch template
