@@ -227,3 +227,23 @@ Use Case:
 - Next we create a topic, this is where an SNS will be sent on. *Note: You would need to confirm your email*
 
 Launch template
+
+
+## Auto Scaling Groups
+
+First we need to create a Launch template, By going in **Launch Templates** under **Instances**:
+- Choose the **AMI** we wish to use
+- Choose the **instance type** (t2.micro)
+- Choose the right ssh keys for **Key pair(login)**
+- Either select an existing **security group** or create a new one
+- Add a **Tag**
+- Under Advanced details, enable **IPV4 DNS requests** and add appropriate **User data**.
+  
+Now we can go to **Auto Scaling Groups** to create our group:
+- Choose the **Launch template** we just created. *Note: We might want to select **Latest** under versions, so we can easily update our template*
+- Select the correct Availability Zones under **Availability Zones and subnets**, this is where the Auto Scaling Group would deploy instances for High availability
+- Either **attach an existing load balancer** or **Attach to a new load balancer**. *Naming convensions: no caps or underscores*
+- Tick **ELB** and **Enable group metrics collection within CloudWatch**
+- Choose the right sizes for **Group size**.
+- And choose the right Scaling out critiria for **Target tracking scaling policy**.
+- We might want to set additional **notifications** and/or **tags**.
