@@ -230,6 +230,8 @@ Launch template
 
 
 ## Auto Scaling Groups
+Auto Scaling group is used for High Availability and scalability for EC2 compute, its used in conjuntion with a Load Balancer to spread traffic across replicated instances.
+![Auto](autoscale.png)
 
 First we need to create a Launch template, By going in **Launch Templates** under **Instances**:
 - Choose the **AMI** we wish to use
